@@ -92,7 +92,7 @@ $(document).ready(function(e) {
 /******************
 * = Gallery width *
 ******************/
-$(function() {
+/*$(function() {
 	var pause = 50; // will only process code within delay(function() { ... }) every 100ms.
 	$(window).resize(function() {
 		delay(function() {
@@ -123,7 +123,7 @@ $(function() {
 		);
 	});
 	$(window).resize();
-});
+});*/
 
 var delay = (function(){
 	var timer = 0;
@@ -133,11 +133,9 @@ var delay = (function(){
 	};
 })();
 
-var num_menu_elm = 6;
-
 function menu_focus( element, i ) {
 	if ( $(element).hasClass('active') ) {
-		if ( i == num_menu_elm ) {
+		if ( i == 6 ) {
 			if ( $('.navbar').hasClass('inv') == false )
 				return;
 		} else {
@@ -147,7 +145,7 @@ function menu_focus( element, i ) {
 	
 	enable_arrows( i );
 		
-	if ( i == 1 || i == num_menu_elm )
+	if ( i == 1 || i == 6 )
 		$('.navbar').removeClass('inv');
 	else
 		$('.navbar').addClass('inv');
@@ -175,7 +173,7 @@ function enable_arrows( dataslide ) {
 	if ( dataslide != 1 ) {
 		$('#arrow-up').removeClass('disabled');
 	}
-	if ( dataslide != num_menu_elm ) {
+	if ( dataslide != 6 ) {
 		$('#arrow-down').removeClass('disabled');
 	}
 	if ( dataslide == 3 ) {
@@ -252,7 +250,7 @@ jQuery(document).ready(function ($) {
 /******************
 * = Gallery hover *
 ******************/
-jQuery(document).ready(function ($) {
+/*jQuery(document).ready(function ($) {
 	//Cache some variables
 	var images = $('#slide-3 a');
 	
@@ -283,7 +281,7 @@ jQuery(document).ready(function ($) {
 			$('.zoom').remove();
 		}
 	);
-});
+});*/
 
 /******************
 * = Arrows click  *
